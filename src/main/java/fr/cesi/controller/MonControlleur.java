@@ -1,6 +1,6 @@
 package fr.cesi.controller;
 
-import fr.cesi.bean.Film;
+import fr.cesi.beans.Film;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +20,7 @@ public class MonControlleur {
     @GetMapping("form")
     public ModelAndView monFormulaire() {
         Film f = new Film();
-        return new ModelAndView("form",
-                "film", f);
+        return new ModelAndView("form","film", f);
     }
 
     @PostMapping("ajoutFilm")
