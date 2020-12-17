@@ -1,6 +1,5 @@
-package fr.cesi.bean;
+package fr.cesi.beans;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 public class Film {

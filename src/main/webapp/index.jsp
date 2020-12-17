@@ -8,9 +8,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>API</title>
 </head>
 <body>
-<a href="app/liste">Ma liste</a>
+    <ul>
+        <li>
+            Pokemon
+            <ul>
+                <li><a href="api/pokemon/add">add</a></li>
+                <li><a href="api/pokemon/del">del</a></li>
+                <li><a href="api/pokemon/all">all</a></li>
+                <li><a href="api/pokemon/one/5">one</a></li>
+            </ul>
+        </li>
+        <li>
+            Trainer
+            <ul>
+                <li><a href="api/trainer/add">add</a></li>
+                <li><a href="api/trainer/del">del</a></li>
+                <li><a href="api/trainer/all">all</a></li>
+                <li><a href="api/trainer/one/1">one</a></li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
