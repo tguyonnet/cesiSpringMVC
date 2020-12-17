@@ -1,4 +1,4 @@
-package fr.cesi.controller;
+package fr.cesi.controller.rest;
 
 import fr.cesi.beans.pokemon.Trainer;
 import fr.cesi.service.GestionTrainer;

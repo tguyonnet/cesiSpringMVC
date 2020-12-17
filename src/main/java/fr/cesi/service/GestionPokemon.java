@@ -1,6 +1,7 @@
 package fr.cesi.service;
 
 import fr.cesi.beans.pokemon.Pokemon;
+import fr.cesi.beans.pokemon.Trainer;
 import fr.cesi.dao.PokemonDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,12 +22,8 @@ public class GestionPokemon extends fr.cesi.service.Service {
         return dao.findAll();
     }
 
-    public Object findOneById(int id) {
-        Optional<Pokemon> pokemon = dao.findById(id);
-        if (pokemon.isPresent()){
-            return pokemon;
-        }
-        return null;
+    public Pokemon getOne(int id) {
+        return dao.findById(id).orElse(null);
     }
 
     public void add(Pokemon pokemon) {
@@ -34,9 +31,6 @@ public class GestionPokemon extends fr.cesi.service.Service {
     }
 
     public void del(int id) {
-        Pokemon pokemon = (Pokemon) findOneById(id);
-        if (pokemon != null) {
-            dao.delete(pokemon);
-        }
+        dao.deleteById(id);
     }
 }

@@ -1,6 +1,7 @@
 package fr.cesi.service;
 
 import fr.cesi.beans.pokemon.Attack;
+import fr.cesi.beans.pokemon.Trainer;
 import fr.cesi.dao.AttackDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,8 +27,15 @@ public class GestionAttack extends fr.cesi.service.Service {
         return dao.findAll();
     }
 
+    public Attack getOne(int id) {
+        return dao.findById(id).orElse(null);
+    }
+
     public void add(Attack attack) {
         dao.save(attack);
     }
 
+    public void del(int id) {
+        dao.deleteById(id);
+    }
 }
